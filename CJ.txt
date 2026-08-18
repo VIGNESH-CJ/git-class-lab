@@ -1,0 +1,43 @@
+Here’s a complete beginner-friendly Python project — a Number Guessing Game.
+Python Code: Number Guessing Game
+Pythonimport random
+
+def number_guessing_game():
+    print("🎯 Welcome to the Number Guessing Game!")
+    print("I have selected a number between 1 and 100.")
+    print("Try to guess it in as few attempts as possible.\n")
+
+    # Generate a random number between 1 and 100
+    secret_number = random.randint(1, 100)
+    attempts = 0
+
+    while True:
+        try:
+            guess = int(input("Enter your guess: "))
+            if guess < 1 or guess > 100:
+                print("⚠ Please enter a number between 1 and 100.")
+                continue
+
+            attempts += 1
+
+            if guess < secret_number:
+                print("📉 Too low! Try again.")
+            elif guess > secret_number:
+                print("📈 Too high! Try again.")
+            else:
+                print(f"✅ Congratulations! You guessed it in {attempts} attempts.")
+                break
+
+        except ValueError:
+            print("⚠ Invalid input. Please enter a valid integer.")
+
+if __name__ == "__main__":
+    number_guessing_game()
+
+
+How It Works:
+
+Random Number Generation: Uses random.randint(1, 100) to pick a secret number.
+User Input & Validation: Ensures the guess is an integer between 1 and 100.
+Feedback Loop: Tells the player if their guess is too high or too low.
+Attempts Counter: Tracks how many tries the player took.
