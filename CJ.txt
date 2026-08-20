@@ -34,9 +34,7 @@ def number_guessing_game():
 if __name__ == "__main__":
     number_guessing_game()
 
-
 How It Works:
-
 Random Number Generation: Uses random.randint(1, 100) to pick a secret number.
 User Input & Validation: Ensures the guess is an integer between 1 and 100.
 Feedback Loop: Tells the player if their guess is too high or too low.
